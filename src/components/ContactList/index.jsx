@@ -30,17 +30,15 @@ const ContactList = () => {
         return (
           <ListItem
             key={value}
-            secondaryAction={
+            disablePadding
+          >
+            <ListItemButton>
               <Checkbox
                 edge="end"
                 onChange={handleToggle(value)}
                 checked={checked.indexOf(value) !== -1}
                 inputProps={{ 'aria-labelledby': labelId }}
               />
-            }
-            disablePadding
-          >
-            <ListItemButton>
               <ListItemAvatar>
                 <Avatar
                   alt={`Avatar n°${value + 1}`}
